@@ -30,7 +30,7 @@ function startROS() {
 		if (event.isApiReady === true) {	
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
-				this.onParticipantsChanged.bing(this)); 
+				this.onParticipantsChanged.bind(this)); 
         		this.displayParticipants(); 	
 		}	
 		};  
