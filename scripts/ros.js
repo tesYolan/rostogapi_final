@@ -31,9 +31,18 @@ function startROS() {
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
+		document.getElementById("sendMessage").onclick = 	// callback for button-click
+          this.buttonClick.bind(this);
         		this.displayParticipants(); 	
 		}	
 		};  
+		
+HangoutDemo.prototype.buttonClick = function () {	
+      var value = gapi.hangout.data.getValue("count") || "0";	// read current count from state
+      value = (parseInt(value, 10) + 1).toString();	// increment count by one
+      gapi.hangout.data.setValue("count", value);	// write new count into state
+
+    };
   HangoutDemo.prototype.onParticipantsChanged = function (event) {	
 
       var div = document.getElementById("container");	
@@ -52,6 +61,7 @@ function startROS() {
 	console.log(l);	
       for (i = 0; i < l; i++) {	
         li = document.createElement("li");	
+        li.innerHTML= "List of Available People on Call. Technically There Must Be a Place to Add Eva Hack if The ROS Spawns Correctly. "
         if (participants[i].person) {	
           li.innerHTML = participants[i].person.displayName;	// Add name to list if available
         } else {	
