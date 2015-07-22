@@ -79,7 +79,7 @@ HangoutDemo.prototype.buttonClick = function () {
         }	
         ul.appendChild(li);	
       }	
-      div = document.getElementById("container");	
+      div = document.getElementById("available");	
       div.appendChild(ul);	
     };      
         var hangoutDemo= new HangoutDemo(); 
