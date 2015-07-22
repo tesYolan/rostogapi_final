@@ -13,8 +13,8 @@
         <h1>Hangout to ROS Demo</h1>	
         
         <div id="container"></div>
-        <div id="chat" style="text-align:right; border:1px solid red>My Previous</div>
-        <div id="sophia" style="text-align:right; border:1px solid red>Sophias Previous</div>
+        <div id="chat" style="text-align:right; border:1px color:#0000FF>My Previous</div>
+        <div id="sophia" style="text-align:right; border:1px color:#0000FF>Sophias Previous</div>
         <div id="input" contenteditable="true">Enter Chat Message here</div>
         
         <button id="sendMessage">Send Message</button>	
