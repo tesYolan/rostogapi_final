@@ -9,9 +9,9 @@
     <Content type="html">	
       <![CDATA[	
         <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
-        <script type="text/javascript" src="https://raw.githubusercontent.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
-	<script type="text/javascript" src="https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/scripts/ros.js"/>
+	<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/master/scripts/ros.js"/>
 	    
        	
         <h1>Hangout to ROS Demo</h1>	
