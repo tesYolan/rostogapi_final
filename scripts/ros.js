@@ -35,7 +35,9 @@ function startROS() {
       var div, participants, ul, li, i, l;	
       participants = gapi.hangout.getParticipants();	// Get array of participants from API
       ul = document.createElement("ul");	
-      l = participants.length;	
+      l = participants.length;
+	console.log("The length is : "); 
+	console.log(l);	
       for (i = 0; i < l; i++) {	
         li = document.createElement("li");	
         if (participants[i].person) {	
