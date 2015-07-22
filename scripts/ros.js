@@ -37,10 +37,20 @@ function startROS() {
 		}	
 		};  
 		
-HangoutDemo.prototype.buttonClick = function () {	
-      var value = gapi.hangout.data.getValue("count") || "0";	// read current count from state
-      value = (parseInt(value, 10) + 1).toString();	// increment count by one
-      gapi.hangout.data.setValue("count", value);	// write new count into state
+HangoutDemo.prototype.buttonClick = function () {
+	
+		
+     var newDiv= document.createElement('div'); 
+     newDiv.className="chatparticipant"; 
+     var div= document.getElementById("chat"); 
+     div.appendChild(newDiv); 
+     
+     newDiv.innerHTML= document.getElementById("input").innerHTML;
+     document.getElementById("input").innerHTML="Enter the next Question for Eva"; 
+      
+      //var value = gapi.hangout.data.getValue("count") || "0";	// read current count from state
+      //value = (parseInt(value, 10) + 1).toString();	// increment count by one
+     // gapi.hangout.data.setValue("count", value);	// write new count into state
 
     };
   HangoutDemo.prototype.onParticipantsChanged = function (event) {	
