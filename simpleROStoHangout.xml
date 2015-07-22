@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>	
+
+  <Module>	
+
+    <ModulePrefs title="Hangout to ROS Demo">	
+      <Require feature="rpc"/>	
+      <Require feature="views"/>	
+    </ModulePrefs>	
+    <Content type="html">	
+      <![CDATA[	
+        <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+        <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
+		<script type="text/javascript" type="text/javascript">
+	  
+	  var ros = new ROSLIB.Ros ({ 
+	  url : 'wss://localhost:9094'
+	  }); 
+	  
+	  ros.on('connection', function() {
+	  console.log('Connected to ROS'); 
+	  }); 
+	  
+	ros.on('error', function(error) {
+    console.log('Error connecting to websocket server: ', error);
+	});
+
+	ros.on('close', function() {
+    console.log('Connection to websocket server closed.');
+	});
+	</script>
+       	
+        <h1>Hangout to ROS Demo</h1>	
+        <div id="container"></div>	
+     
+        <script type="text/javascript" type="text/javascript">
+        (function (window) {
+        "use strict"; 
+        function HangoutDemo() {
+        console.log("starting ..."); 
+        gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
+        }
+        
+		HangoutDemo.prototype.onApiReady = function (event) {	
+
+		if (event.isApiReady === true) {	
+
+        console.log("API Ready");	
+
+        // we can start doing stuff here	
+
+		}	
+
+		};
+        
+        
+        var hangoutDemo= new HangoutDemo(); 
+        }(window)); 
+        
+        </script>
+
+      ]]>	
+    </Content>	
+  </Module>
