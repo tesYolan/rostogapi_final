@@ -9,17 +9,21 @@
     <Content type="html">	
       <![CDATA[	
  
-       	
+       	<div id="container" style="width: 100%; overflow: hidden;">
+       	<div style="width: 25%; float: left;">
         <h1>Hangout to ROS Demo</h1>	
         
-        <div id="container"></div>
+        
         
         <div id="chat" style="text-align:left; border:1px color:#0000FF">Chat Previous</div>
         
         <div id="input" contenteditable="true">Enter Chat Message here</div>
         
         <button id="sendMessage">Send Message</button>	
+        </div>
         
+        <div style="margin-left: 620px;">Right</div>
+        </div>
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
