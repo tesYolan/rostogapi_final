@@ -29,9 +29,20 @@ function startROS() {
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {	
 			console.log("API Ready");	
+			gapi.hangout.onParticipantsChanged.add(
+				this.onParticipantsChanged.bing(this)); 
         		this.displayParticipants(); 	
 		}	
 		};  
+  HangoutDemo.prototype.onParticipantsChanged = function (event) {	
+
+      var div = document.getElementById("container");	
+
+      div.innerHTML = "";	// make sure our container is empty before displaying the list
+
+      this.displayParticipants();	
+
+    };
   HangoutDemo.prototype.displayParticipants = function () {	
       var div, participants, ul, li, i, l;	
       participants = gapi.hangout.getParticipants();	// Get array of participants from API
