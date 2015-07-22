@@ -12,10 +12,10 @@
        	
         <h1>Hangout to ROS Demo</h1>	
         <div id="container"></div>	
-       <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
-	<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
-	<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/master/scripts/ros.js"/>
+		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
+		<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/master/scripts/ros.js"/>
 	    
       ]]>	
     </Content>	
