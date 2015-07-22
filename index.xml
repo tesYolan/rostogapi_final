@@ -8,15 +8,15 @@
     </ModulePrefs>	
     <Content type="html">	
       <![CDATA[	
-        <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+ 
+       	
+        <h1>Hangout to ROS Demo</h1>	
+        <div id="container"></div>	
+       <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
 	<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/master/scripts/ros.js"/>
 	    
-       	
-        <h1>Hangout to ROS Demo</h1>	
-        <div id="container"></div>	
-
       ]]>	
     </Content>	
   </Module>

@@ -2,8 +2,9 @@
         "use strict"; 
         function HangoutDemo() {
         console.log("starting ..."); 
-        startROS(); 
+
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
+        startROS(); 
         }
         
         
