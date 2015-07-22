@@ -28,7 +28,7 @@ function startROS() {
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {	
 			console.log("API Ready");	
-        		this.diplayParticipants(); 	
+        		this.displayParticipants(); 	
 		}	
 		};  
   HangoutDemo.prototype.displayParticipants = function () {	
