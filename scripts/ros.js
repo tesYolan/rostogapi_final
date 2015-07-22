@@ -42,8 +42,8 @@ HangoutDemo.prototype.buttonClick = function () {
 		
      var newDiv= document.createElement('div'); 
      newDiv.className="chatparticipant"; 
-     var div= document.getElementById("chat"); 
-     div.appendChild(newDiv); 
+     var div2= document.getElementById("chat"); 
+     div2.appendChild(newDiv); 
      
      newDiv.innerHTML= document.getElementById("input").innerHTML;
      document.getElementById("input").innerHTML="Enter the next Question for Eva"; 

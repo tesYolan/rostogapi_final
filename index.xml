@@ -13,7 +13,8 @@
         <h1>Hangout to ROS Demo</h1>	
         
         <div id="container"></div>
-        <div id="chat" style="text-align:left; border:1px color:#0000FF>Chat Previous</div>
+        
+        <div id="chat" style="text-align:left; border:1px color:#0000FF">Chat Previous</div>
         
         <div id="input" contenteditable="true">Enter Chat Message here</div>
         
