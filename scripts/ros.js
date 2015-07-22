@@ -28,8 +28,25 @@ function startROS() {
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {	
 			console.log("API Ready");	
-        // we can start doing stuff here	
+        		this.diplayParticipants(); 	
 		}	
-		};        
+		};  
+  HangoutDemo.prototype.displayParticipants = function () {	
+      var div, participants, ul, li, i, l;	
+      participants = gapi.hangout.getParticipants();	// Get array of participants from API
+      ul = document.createElement("ul");	
+      l = participants.length;	
+      for (i = 0; i < l; i++) {	
+        li = document.createElement("li");	
+        if (participants[i].person) {	
+          li.innerHTML = participants[i].person.displayName;	// Add name to list if available
+        } else {	
+          li.innerHTML = "unknown";	
+        }	
+        ul.appendChild(li);	
+      }	
+      div = document.getElementById("container");	
+      div.appendChild(ul);	
+    };      
         var hangoutDemo= new HangoutDemo(); 
 }(window)); 
