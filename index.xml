@@ -48,11 +48,11 @@
         <div id="available">People Available in Chat</div>
         <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto; height: 200px">Chat Previous</div>
         <button id="sendMessage">Send Message</button>	
-        </div>
+        
         <div id="input" contenteditable="true">Chat Here</div>
         <div style="margin-left: 620px; background-color:#000000">Right</div>
-        </div>
         
+        </div>
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
