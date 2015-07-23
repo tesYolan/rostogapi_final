@@ -43,16 +43,17 @@
 	}
 	</style>
        	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
+       	
        	<div style="width: 25%; float: left; background-color:#000000">
-        <h1>Hangout to ROS Demo</h1>	
-        <div id="available">People Available in Chat</div>
-        <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto;">Chat Previous</div>
-        <button id="sendMessage">Send Message</button>	
+       	
+        <h1>Hangout with Sophia</h1>	
         
+        <div id="available">People Available in Chat</div>
+        <div id="chat" style="text-align:left; border:1px color:#0000FF">Chat Previous</div>
+        <button id="sendMessage">Send Message</button>	
         <div id="input" contenteditable="true">Chat Here</div>
         </div>
         <div style="margin-left: 620px; background-color:#000000">Right</div>
-        
         </div>
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
