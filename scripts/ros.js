@@ -45,6 +45,19 @@ function startROS() {
 						var newDiv= document.createElement('div'); 
 						newDiv.className="chatparticipant"; 
 						var div2= document.getElementById("chat"); 
+						var participant= gapi.hangout.getLocalParticipant().person.displayName;
+						var space=participant.trim().indexOf(" "); 
+						if(space==-1)
+						{
+							tag.innerHTML=participant.charAt(0); 
+						}
+						else 
+						{
+							//Currently Represents Names as a form of Two latters only
+							tag.innerHTML= participant.charAt(0) + participant.charAt(space+1); 
+							
+						}
+						div2.appendChile(tag); 
 						div2.appendChild(newDiv); 
 						//Now this is where the condition
 						newDiv.innerHTML= document.getElementById("input").innerHTML;

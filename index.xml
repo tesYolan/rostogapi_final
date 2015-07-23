@@ -71,15 +71,12 @@
         <h1>Hangout with Sophia</h1>	
         
         <div id="info" >
-       	<a href="http://www.hansonrobotics.com/">Know More About Sophia and her Makers</a>
+       	<a href="http://www.hansonrobotics.com/" target="_blank">Know More About Sophia and her Makers</a>
        	</div>
         <div id="available">People Available in Chat</div>
         
         <div id="chat" style="text-align:left; border: 1px dotted red; color:#0000FF"></div>
-        
-       
-       
-        
+
         <div id="input" contenteditable="true" tabindex="0">Chat Here</div>
         
         </div>
