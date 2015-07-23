@@ -34,7 +34,7 @@ function startROS() {
 				//removed the text id. 
 				document.getElementById('input').onkeypress= function (e) {
 					var keycode = e.keyCode; 
-					if(keyCode==13) {
+					if(keycode==13) {
 						var newDiv= document.createElement('div'); 
 						newDiv.className="chatparticipant"; 
 						var div2= document.getElementById("chat"); 
