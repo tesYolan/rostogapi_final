@@ -17,7 +17,7 @@
 		height:100%;
 	}
 
-	#body {
+	#container {
 		padding:10px;
 		padding-bottom:60px;	/* Height of the footer */
 	}
@@ -50,6 +50,7 @@
         <button id="sendMessage">Send Message</button>	
         
         <div id="input" contenteditable="true">Chat Here</div>
+        </div>
         <div style="margin-left: 620px; background-color:#000000">Right</div>
         
         </div>
