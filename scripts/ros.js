@@ -31,28 +31,41 @@ function startROS() {
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
-		document.getElementById("sendMessage").onclick = 	// callback for button-click
-          this.buttonClick.bind(this);
+				//removed the text id. 
+				document.getElementById('input').onkeypress= function (e) {
+					var keycode = e.keyCode; 
+					if(keyCode==13) {
+						var newDiv= document.createElement('div'); 
+						newDiv.className="chatparticipant"; 
+						var div2= document.getElementById("chat"); 
+						div2.appendChild(newDiv); 
+     
+						newDiv.innerHTML= document.getElementById("input").innerHTML;
+						document.getElementById("input").innerHTML="Enter the next Question for Eva"; 
+					}
+				} 
+		//document.getElementById("sendMessage").onclick = 	// callback for button-click
+          //this.buttonClick.bind(this);
         		this.displayParticipants(); 	
 		}	
 		};  
 		
-HangoutDemo.prototype.buttonClick = function () {
+	//HangoutDemo.prototype.buttonClick = function () {
 	
 		
-     var newDiv= document.createElement('div'); 
-     newDiv.className="chatparticipant"; 
-     var div2= document.getElementById("chat"); 
-     div2.appendChild(newDiv); 
+     //var newDiv= document.createElement('div'); 
+     //newDiv.className="chatparticipant"; 
+     //var div2= document.getElementById("chat"); 
+     //div2.appendChild(newDiv); 
      
-     newDiv.innerHTML= document.getElementById("input").innerHTML;
-     document.getElementById("input").innerHTML="Enter the next Question for Eva"; 
+     //newDiv.innerHTML= document.getElementById("input").innerHTML;
+     //document.getElementById("input").innerHTML="Enter the next Question for Eva"; 
       
-      //var value = gapi.hangout.data.getValue("count") || "0";	// read current count from state
-      //value = (parseInt(value, 10) + 1).toString();	// increment count by one
-     // gapi.hangout.data.setValue("count", value);	// write new count into state
+      ////var value = gapi.hangout.data.getValue("count") || "0";	// read current count from state
+      ////value = (parseInt(value, 10) + 1).toString();	// increment count by one
+     //// gapi.hangout.data.setValue("count", value);	// write new count into state
 
-    };
+    //};
   HangoutDemo.prototype.onParticipantsChanged = function (event) {	
 
       var div = document.getElementById("container");	
