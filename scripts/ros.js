@@ -105,12 +105,13 @@ function startROS() {
       l = participants.length;
 	console.log("The length is : "); 
 	console.log(l);	
+	participants_list=[]; 
 	if(rosok)
 	{
 	li = document.createElement("li"); 
 	li.innerHTML= "Sophia";
 	ul.appendChild(li); 
-	participants_list = ["Sophia"];  
+	participants_list.push("Sophia");  
 	}
       for (i = 0; i < l; i++) {	
         li = document.createElement("li");	
