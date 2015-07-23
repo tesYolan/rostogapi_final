@@ -100,19 +100,21 @@ function startROS() {
     };
   HangoutDemo.prototype.displayParticipants = function () {	
       var div, participants, ul, li, i, l;	
+      div = document.getElementById("available");	
       participants = gapi.hangout.getParticipants();	// Get array of participants from API
       ul = document.createElement("ul");	
       l = participants.length;
 	console.log("The length is : "); 
 	console.log(l);	
 	participants_list=[]; 
+	
 	if(rosok)
 	{
+		console.log("ROS Conneciton is verified. "); 
 	li = document.createElement("li"); 
 	li.innerHTML= "Sophia";
 	ul.appendChild(li); 
-	  div = document.getElementById("available");	
-      div.appendChild(ul);	
+    div.appendChild(ul);	
 	participants_list.push("Sophia");  
 	}
       for (i = 0; i < l; i++) {	
@@ -125,7 +127,7 @@ function startROS() {
         ul.appendChild(li);	
         participants_list.push(li.innerHTML); 
       }	
-      div = document.getElementById("available");	
+      
       div.appendChild(ul);	
     };      
         var hangoutDemo= new HangoutDemo(); 
