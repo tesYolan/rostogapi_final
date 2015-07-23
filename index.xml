@@ -33,7 +33,28 @@
 	background:#000000;
 	
 	}
-	
+	a:hover {
+	background-color: yellow; 
+	}
+	/*Found from jsfiddle.net */ 
+	.numberCircle {
+    border-radius: 30%;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    
+    background: #fff;
+    border: 1px solid #666;
+    color: #666;
+    text-align: center;
+    
+    font: 26px Arial, sans-serif;
+    float:left;
+}
+	.chatparticipant
+	{
+	float:left;
+	}
 	
 	
 	/* other non-essential CSS */
@@ -43,14 +64,18 @@
 	}
 	</style>
        	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
+       
        	
        	<div style="width: 25%; float: left; background-color:#000000 border: 1px dotted red;">
        	
         <h1>Hangout with Sophia</h1>	
         
+        <div id="info" >
+       	<a href="http://www.hansonrobotics.com/">Know More About Sophia and her Makers</a>
+       	</div>
         <div id="available">People Available in Chat</div>
         
-        <div id="chat" style="text-align:left; border: 1px dotted red; color:#0000FF">Chat Previous</div>
+        <div id="chat" style="text-align:left; border: 1px dotted red; color:#0000FF"></div>
         
        
        

@@ -7,7 +7,8 @@
         startROS(); 
         }
         
-        
+ var rosok=false;  
+ var participants;       
 function startROS() {
 	var ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
@@ -15,14 +16,17 @@ function startROS() {
 	  
 	  ros.on('connection', function() {
 	  console.log('Connected to ROS'); 
+	  rosok=true; 
 	  }); 
 	  
 		ros.on('error', function(error) {
 		console.log('Error connecting to websocket server: ', error);
+		rosok=false; 
 		});
 
 		ros.on('close', function() {
 		console.log('Connection to websocket server closed.');
+		rosok=true; 
 		});
 	}
 		
@@ -35,13 +39,19 @@ function startROS() {
 				document.getElementById('input').onkeypress= function (e) {
 					var keycode = e.keyCode; 
 					if(keycode==13) {
+						var tag= document.createElement('div'); 
+						tag.className="numberCircle"; 
+						
 						var newDiv= document.createElement('div'); 
 						newDiv.className="chatparticipant"; 
 						var div2= document.getElementById("chat"); 
 						div2.appendChild(newDiv); 
-     
+						//Now this is where the condition
 						newDiv.innerHTML= document.getElementById("input").innerHTML;
-						document.getElementById("input").innerHTML="Enter the next Question for Eva"; 
+						document.getElementById("input").innerHTML=""; 
+						
+						//Also this is where the message would necessaryly be sent. 
+						//Asso where the processing of the partificipants name be filtered. 
 					}
 				} 
 		//document.getElementById("sendMessage").onclick = 	// callback for button-click
@@ -82,15 +92,22 @@ function startROS() {
       l = participants.length;
 	console.log("The length is : "); 
 	console.log(l);	
+	if(rosok)
+	{
+	li = document.createElement("li"); 
+	li.innerHTML= "Sophia";
+	ul.appendChild(li); 
+	participants = ["Sophia"];  
+	}
       for (i = 0; i < l; i++) {	
         li = document.createElement("li");	
-        li.innerHTML= "List of Available People on Call. Technically There Must Be a Place to Add Eva Hack if The ROS Spawns Correctly. "
         if (participants[i].person) {	
           li.innerHTML = participants[i].person.displayName;	// Add name to list if available
         } else {	
           li.innerHTML = "unknown";	
         }	
         ul.appendChild(li);	
+        participants.push(li.innerHTML); 
       }	
       div = document.getElementById("available");	
       div.appendChild(ul);	
