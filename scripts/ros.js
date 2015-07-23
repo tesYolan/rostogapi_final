@@ -57,7 +57,7 @@ function startROS() {
 							tag.innerHTML= participant.charAt(0) + participant.charAt(space+1); 
 							
 						}
-						div2.appendChile(tag); 
+						div2.appendChild(tag); 
 						div2.appendChild(newDiv); 
 						//Now this is where the condition
 						newDiv.innerHTML= document.getElementById("input").innerHTML;
