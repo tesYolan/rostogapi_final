@@ -10,16 +10,12 @@
       <![CDATA[	
  	<style media="screen" type="text/css">
 	html,
-	body {
-		color: blue;
-		margin:0;
-		padding:0;
-		height:100%;
-	}
+	
 
 	#container {
 		padding:10px;
 		padding-bottom:60px;	/* Height of the footer */
+		height:100%;
 	}
 	#input {
 		color: blue;
