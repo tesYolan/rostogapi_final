@@ -30,6 +30,7 @@
 	
 	color: blue;
 	background:#000000;
+	border: 1px solid red
 	}
 	
 	
@@ -41,7 +42,7 @@
 	</style>
        	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
        	
-       	<div style="width: 25%; float: left; background-color:#000000">
+       	<div style="width: 25%; float: left; background-color:#000000 ">
        	
         <h1>Hangout with Sophia</h1>	
         
