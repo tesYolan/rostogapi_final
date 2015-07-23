@@ -10,12 +10,12 @@
       <![CDATA[	
  
        	<div id="container" style="width: 100%; overflow: hidden;">
-       	<div style="width: 25%; float: left;">
+       	<div style="width: 25%; float: left; padding: ">
         <h1>Hangout to ROS Demo</h1>	
         
         
         <div id="available">Available People</div>
-        <div id="chat" style="text-align:left; border:1px color:#0000FF">Chat Previous</div>
+        <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto; height: 100px">Chat Previous</div>
         
         <div id="input" contenteditable="true">Enter Chat Message here</div>
         
