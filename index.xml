@@ -14,15 +14,17 @@
 		color: blue;
 		margin:0;
 		padding:0;
+		width:25%;
 		height:100%;
 	}
 
 	#body {
 		padding:10px;
+		width:25%;
 		padding-bottom:60px;	/* Height of the footer */
 	}
 	#input {
-	color: blue;
+		color: blue;
 		position:absolute;
 		bottom:0;
 		width:25%;
@@ -33,6 +35,7 @@
 	
 	}
 	#id {
+	width:25%;
 	color: blue;
 	background:#000000;
 	}
