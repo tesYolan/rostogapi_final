@@ -14,7 +14,7 @@
 
 	#container {
 		color: white; 
-		padding:1px;
+		
 		padding-bottom:60px;	/* Height of the footer */
 		height:100%;
 	}
@@ -25,13 +25,16 @@
 		width:25%;
 		height:60px;			/* Height of the footer */
 		background:#000000;
+		border: solid 1px #e1e1e1;
 	}
 	#id {
 	
 	color: blue;
 	background:#000000;
-	border: 1px solid red
+	border: 1px;
+	 solid red
 	}
+	
 	
 	
 	/* other non-essential CSS */
