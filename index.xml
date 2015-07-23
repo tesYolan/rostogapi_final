@@ -8,16 +8,52 @@
     </ModulePrefs>	
     <Content type="html">	
       <![CDATA[	
- 
+ 	<style media="screen" type="text/css">
+	html,
+	body {
+		margin:0;
+		padding:0;
+		height:100%;
+	}
+	#container {
+		min-height:100%;
+		position:relative;
+	}
+	#header {
+		background:#ff0;
+		padding:10px;
+	}
+	#body {
+		padding:10px;
+		padding-bottom:60px;	/* Height of the footer */
+	}
+	#footer {
+		position:absolute;
+		bottom:0;
+		width:100%;
+		height:60px;			/* Height of the footer */
+		background:#6cf;
+	}
+	/* other non-essential CSS */
+	#header p,
+	#header h1 {
+		margin:0;
+		padding:10px 0 0 10px;
+	}
+	#footer p {
+		margin:0;
+		padding:10px;
+	}
+	</style>
        	<div id="container" style="width: 100%; overflow: hidden;">
        	<div style="width: 25%; float: left; padding: ">
         <h1>Hangout to ROS Demo</h1>	
         
         
         <div id="available">Available People</div>
-        <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto; height: 100px">Chat Previous</div>
+        <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto; height: 200px">Chat Previous</div>
         
-        <div id="input" contenteditable="true">Enter Chat Message here</div>
+        <div id="footer" contenteditable="true">Enter Chat Message here</div>
         
         <button id="sendMessage">Send Message</button>	
         </div>
