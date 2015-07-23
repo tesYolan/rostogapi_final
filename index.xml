@@ -15,14 +15,7 @@
 		padding:0;
 		height:100%;
 	}
-	#container {
-		
-		position:relative;
-	}
-	#header {
-		background:#ff0;
-		padding:10px;
-	}
+
 	#body {
 		padding:10px;
 		padding-bottom:60px;	/* Height of the footer */
@@ -34,11 +27,6 @@
 		background:#6cf;
 	}
 	/* other non-essential CSS */
-	#header p,
-	#header h1 {
-		margin:0;
-		padding:10px 0 0 10px;
-	}
 	#input p {
 		margin:0;
 		padding:10px;
