@@ -111,6 +111,8 @@ function startROS() {
 	li = document.createElement("li"); 
 	li.innerHTML= "Sophia";
 	ul.appendChild(li); 
+	  div = document.getElementById("available");	
+      div.appendChild(ul);	
 	participants_list.push("Sophia");  
 	}
       for (i = 0; i < l; i++) {	
