@@ -14,7 +14,7 @@
 
 	#container {
 		color: white; 
-		padding:10px;
+		padding:1px;
 		padding-bottom:60px;	/* Height of the footer */
 		height:100%;
 	}
@@ -36,7 +36,7 @@
 	/* other non-essential CSS */
 	#input p {
 		margin:0;
-		padding:10px;
+		padding:1px;
 	}
 	</style>
        	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
