@@ -8,7 +8,7 @@
         }
         
  var rosok=false;  
- var participants;       
+ var participants_list;       
 function startROS() {
 	var ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
@@ -110,7 +110,7 @@ function startROS() {
 	li = document.createElement("li"); 
 	li.innerHTML= "Sophia";
 	ul.appendChild(li); 
-	participants = ["Sophia"];  
+	participants_list = ["Sophia"];  
 	}
       for (i = 0; i < l; i++) {	
         li = document.createElement("li");	
@@ -120,7 +120,7 @@ function startROS() {
           li.innerHTML = "unknown";	
         }	
         ul.appendChild(li);	
-        participants.push(li.innerHTML); 
+        participants_list.push(li.innerHTML); 
       }	
       div = document.getElementById("available");	
       div.appendChild(ul);	
