@@ -23,8 +23,9 @@
 	#input {
 		position:absolute;
 		bottom:0;
+		width:25l
 		height:60px;			/* Height of the footer */
-		background:#6cf;
+		background:#000000;
 	}
 	#id {
 	background:#000000
