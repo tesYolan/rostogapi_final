@@ -50,7 +50,7 @@
         <div id="available">Available People</div>
         <div id="chat" style="text-align:left; border:1px color:#0000FF overflow-y: auto; height: 200px">Chat Previous</div>
         
-        <div id="footer" contenteditable="true">Enter Chat Message here</div>
+        <div id="input" contenteditable="true">Enter Chat Message here</div>
         
         <button id="sendMessage">Send Message</button>	
         </div>
