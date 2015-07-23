@@ -22,14 +22,19 @@
 		padding-bottom:60px;	/* Height of the footer */
 	}
 	#input {
+	color: blue;
 		position:absolute;
 		bottom:0;
 		width:25%;
 		height:60px;			/* Height of the footer */
 		background:#000000;
 	}
+	#style {
+	
+	}
 	#id {
-	background:#000000
+	color: blue;
+	background:#000000;
 	}
 	
 	
