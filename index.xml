@@ -57,6 +57,10 @@
 	}
 	
 	
+	.sophia
+	{
+	float:right;
+	}
 	/* other non-essential CSS */
 	#input p {
 		margin:0;

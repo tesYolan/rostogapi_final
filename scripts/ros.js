@@ -2,13 +2,12 @@
         "use strict"; 
         function HangoutDemo() {
         console.log("starting ..."); 
-
+		startROS(); 
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        startROS(); 
+        
         }
         
- var rosok=false;  
- var participants_list;       
+ 
 function startROS() {
 	var ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
@@ -36,8 +35,14 @@ function startROS() {
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
 				//removed the text id. 
-				document.getElementById('input').onkeypress= function (e) {
-					var keycode = e.keyCode; 
+				document.getElementById('input').onkeypress= this.pressedEnter.bind(this); 
+		//document.getElementById("sendMessage").onclick = 	// callback for button-click
+          //this.buttonClick.bind(this);
+        		this.displayParticipants(); 	
+		}	
+		};  
+	HangoutDemo.prototype.pressedEnter= function (e) {
+				var keycode = e.keyCode; 
 					if(keycode==13) {
 						var tag= document.createElement('div'); 
 						tag.className="numberCircle"; 
@@ -66,13 +71,7 @@ function startROS() {
 						//Also this is where the message would necessaryly be sent. 
 						//Asso where the processing of the partificipants name be filtered. 
 					}
-				} 
-		//document.getElementById("sendMessage").onclick = 	// callback for button-click
-          //this.buttonClick.bind(this);
-        		this.displayParticipants(); 	
-		}	
-		};  
-		
+	}
 	//HangoutDemo.prototype.buttonClick = function () {
 	
 		
@@ -131,4 +130,6 @@ function startROS() {
       div.appendChild(ul);	
     };      
         var hangoutDemo= new HangoutDemo(); 
+        var rosok=false;  
+		var participants_list;      
 }(window)); 
