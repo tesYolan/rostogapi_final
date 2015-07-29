@@ -67,7 +67,7 @@ function startROS() {
 						//Now this is where the condition
 						newDiv.innerHTML= document.getElementById("input").innerHTML;
 						message.utterance = document.getElementById("input"). 
-						chatTopic.pulish(message); 
+						chatTopic.publish(message); 
 						
 						
 						document.getElementById("input").innerHTML=""; 
