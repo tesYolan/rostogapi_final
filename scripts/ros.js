@@ -9,7 +9,7 @@
         
  
 function startROS() {
-	var ros = new ROSLIB.Ros ({ 
+	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
 	  }); 
 	  
@@ -134,6 +134,7 @@ function startROS() {
       
       div.appendChild(ul);	
     };      
+		var ros; 
         var hangoutDemo= new HangoutDemo(); 
         var rosok=false;  
 		var participants_list;    
