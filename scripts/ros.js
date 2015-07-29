@@ -66,6 +66,10 @@ function startROS() {
 						div2.appendChild(newDiv); 
 						//Now this is where the condition
 						newDiv.innerHTML= document.getElementById("input").innerHTML;
+						message.utterance = document.getElementById("input"). 
+						chatTopic.pulish(message); 
+						
+						
 						document.getElementById("input").innerHTML=""; 
 						
 						//Also this is where the message would necessaryly be sent. 
@@ -97,6 +101,7 @@ function startROS() {
       this.displayParticipants();	
 
     };
+  
   HangoutDemo.prototype.displayParticipants = function () {	
       var div, participants, ul, li, i, l;	
       div = document.getElementById("available");	
@@ -131,5 +136,33 @@ function startROS() {
     };      
         var hangoutDemo= new HangoutDemo(); 
         var rosok=false;  
-		var participants_list;      
+		var participants_list;    
+//===========================================================================
+	var chatTopic = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_speech'
+		messageType : 'chatbot/ChatMessage'
+	}); 
+	var message = new ROSLIB.Message({
+		utterance : '', 
+		confidence : 1
+		}); 
+//===========================================================================		
+	var chatResponse = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_responses'
+		messageType : 'std_msgs/String'
+	}); 
+	
+	var listenMessage = new ROSLIB.Message({
+		response : ''
+	}); 
+	//Call back fucntion for the audio tracker. 
+	chatResponse.subscribe(function(message) {
+		listenMessage.response = message.data; 
+		//Here Pulish the topic to a new div in topic. 
+		console.log(listenMessage.response()); 
+	}); 
+	
+	
 }(window)); 
