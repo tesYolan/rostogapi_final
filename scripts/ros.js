@@ -109,7 +109,7 @@ function startROS() {
 	
 	if(rosok)
 	{
-		console.log("ROS Conneciton is verified. "); 
+	console.log("ROS Conneciton is verified. "); 
 	li = document.createElement("li"); 
 	li.innerHTML= "Sophia";
 	ul.appendChild(li); 
