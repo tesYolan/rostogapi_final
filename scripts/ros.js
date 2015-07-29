@@ -4,7 +4,7 @@
         console.log("starting ..."); 
 		startROS(); 
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        
+        loadCanvas(); 
         }
         
  
