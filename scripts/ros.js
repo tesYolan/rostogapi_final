@@ -2,9 +2,9 @@
         "use strict"; 
         function HangoutDemo() {
         console.log("starting ..."); 
-		startROS(); 
+		
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        loadCanvas(); 
+        
         }
         
  
@@ -30,7 +30,9 @@ function startROS() {
 	}
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
-		if (event.isApiReady === true) {	
+		if (event.isApiReady === true) {
+			startROS();
+			loadCanvas();  	
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
@@ -38,7 +40,8 @@ function startROS() {
 				document.getElementById('input').onkeypress= this.pressedEnter.bind(this); 
 		//document.getElementById("sendMessage").onclick = 	// callback for button-click
           //this.buttonClick.bind(this);
-        		this.displayParticipants(); 	
+        		this.displayParticipants();
+        		 	
 		}	
 		};  
 	HangoutDemo.prototype.pressedEnter= function (e) {
