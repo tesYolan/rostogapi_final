@@ -146,7 +146,7 @@ function startROS() {
 	}); 
 	var message = new ROSLIB.Message({
 		utterance : '', 
-		confidence : 1
+		confidence : 100
 		}); 
 //===========================================================================		
 	var chatResponse = new ROSLIB.Topic({
