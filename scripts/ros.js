@@ -146,7 +146,7 @@ function startROS() {
 	}); 
 	var message = new ROSLIB.Message({
 		utterance : '', 
-		confidence : 100
+		confidence : 90
 		}); 
 //===========================================================================		
 	var chatResponse = new ROSLIB.Topic({
@@ -162,7 +162,7 @@ function startROS() {
 	chatResponse.subscribe(function(message) {
 		listenMessage.response = message.data; 
 		//Here Pulish the topic to a new div in topic. 
-		console.log(listenMessage.response); 
+		console.log(message.data); 
 	}); 
 	
 	
