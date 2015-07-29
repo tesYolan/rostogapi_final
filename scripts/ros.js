@@ -133,7 +133,17 @@ function startROS() {
       }	
       
       div.appendChild(ul);	
-    };      
+    };  
+    function loadCanvas() {
+		var id = gapi.hangout.getLocalParticipantId(); 
+		var canvas = gapi.hangout.layout.getVideoCanvas(); 
+		
+		canvas.setWidth(400); 
+		canvas.setVisible(true); 
+		
+		var right= document.getElementById('sophia'); 
+		right.appendChild(canvas); 
+	}
 		var ros; 
         var hangoutDemo= new HangoutDemo(); 
         var rosok=false;  

@@ -84,7 +84,7 @@
         <div id="input" contenteditable="true" tabindex="0">Chat Here</div>
         
         </div>
-        <div style="margin-left: 620px; background-color:#000000 border: 1px dotted red;">Right</div>
+        <div id= "sophia" style="margin-left: 620px; background-color:#000000 border: 1px dotted red;">Right</div>
         </div>
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
