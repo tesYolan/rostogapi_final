@@ -140,7 +140,7 @@ function startROS() {
 //===========================================================================
 	var chatTopic = new ROSLIB.Topic({
 		ros : ros, 
-		name : '/eva/chatbot_speech'
+		name : '/eva/chatbot_speech',
 		messageType : 'chatbot/ChatMessage'
 	}); 
 	var message = new ROSLIB.Message({
