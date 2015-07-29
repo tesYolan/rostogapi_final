@@ -162,7 +162,7 @@ function startROS() {
 	chatResponse.subscribe(function(message) {
 		listenMessage.response = message.data; 
 		//Here Pulish the topic to a new div in topic. 
-		console.log(listenMessage.response()); 
+		console.log(listenMessage.response); 
 	}); 
 	
 	
