@@ -50,7 +50,8 @@
     
     font: 26px Arial, sans-serif;
     float:left;
-}
+	}
+	
 	.chatparticipant
 	{
 	float:left;
@@ -66,7 +67,7 @@
        	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
        
        	
-       	<div style="width: 25%; float: left; background-color:#000000 border: 1px dotted red;">
+       	<div id="chatbox" style="width: 25%; float: left; background-color:#000000 border: 1px dotted red;">
        	
         <h1>Hangout with Sophia</h1>	
         
