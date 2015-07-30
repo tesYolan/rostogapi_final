@@ -31,8 +31,11 @@ function startROS() {
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {
+			
+			
+			loadCanvas();  		 
 			startROS();
-			loadCanvas();  	
+			
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
@@ -41,7 +44,7 @@ function startROS() {
 		//document.getElementById("sendMessage").onclick = 	// callback for button-click
           //this.buttonClick.bind(this);
         		this.displayParticipants();
-        		 	
+	
 		}	
 		};  
 	HangoutDemo.prototype.pressedEnter= function (e) {
@@ -145,7 +148,7 @@ function startROS() {
 		canvas.setWidth(400); 
 		canvas.setVisible(true); 
 		
-		var right= document.getElementById('sophia'); 
+		var right= document.getElementById("sophia"); 
 		right.appendChild(canvas); 
 	}
 		var ros; 

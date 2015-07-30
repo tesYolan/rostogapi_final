@@ -64,25 +64,24 @@
 		padding:1px;
 	}
 	</style>
-       	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">
-       
-       	
-       	<div id="chatbox" style="width: 25%; float: left; background-color:#000000 border: 1px dotted red;">
-       	
-        <h1>Hangout with Sophia</h1>	
+       	<div id="container" style="width: 100%; overflow: hidden; background-color:#000000">   	
+			<div id="chatbox" style="width: 25%; float: left; background-color:#000000 border: 1px dotted red;">
+       	        <h1>Hangout with Sophia</h1>	   
+					<div id="info" >
+						<a href="http://www.hansonrobotics.com/" target="_blank">Know More About Sophia and her Makers</a>
+					</div>
+			<div id="available">People Available in Chat</div>
         
-        <div id="info" >
-       	<a href="http://www.hansonrobotics.com/" target="_blank">Know More About Sophia and her Makers</a>
-       	</div>
-        <div id="available">People Available in Chat</div>
-        
-        <div id="chat" style="text-align:left; border: 1px dotted red; color:#0000FF"></div>
+			<div id="chat" style="text-align:left; border: 1px dotted red; color:#0000FF"></div>
 
-        <div id="input" contenteditable="true" tabindex="0">Chat Here</div>
+			<div id="input" contenteditable="true" tabindex="0">Chat Here</div>
+        
+			</div>
+			
+        <div id= "sophia" style="margin-left: 620px; background-color:#000000 border: 1px dotted red;">Video 2</div>
         
         </div>
-        <div id= "sophia" style="margin-left: 620px; background-color:#000000 border: 1px dotted red;">Video</div>
-        </div>
+        
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
