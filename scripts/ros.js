@@ -141,7 +141,7 @@ function startROS() {
 		var id = gapi.hangout.getLocalParticipantId(); 
 		var canvas = gapi.hangout.layout.getVideoCanvas(); 
 		
-		canvas.style.postion ="absolute"; 
+		canvas.style.position ="absolute"; 
 		canvas.setWidth(400); 
 		canvas.setVisible(true); 
 		
