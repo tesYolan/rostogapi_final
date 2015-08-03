@@ -149,7 +149,7 @@ body
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
-		https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js
+		<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js"></script>
 	    
       ]]>	
     </Content>	
