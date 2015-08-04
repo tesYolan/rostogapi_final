@@ -81,7 +81,7 @@
 
         }
  
- (function (window) {
+ (function () {
         "use strict"; 
         function HangoutDemo() {
         console.log("starting ..."); 
@@ -142,4 +142,4 @@
 	//Call back fucntion for the audio tracker. 
 
 	
-}(window)); 
+}()); 
