@@ -132,10 +132,6 @@ body
 }
 		</style>
 		
-		<script>
-
-		
-		</script>
 		<div id="browser-window" ng-controller="NgChatCtrl">
         <div id="viewport">
             <div id="viewport-content">
@@ -145,7 +141,7 @@ body
                 </div>
             </div>
         </div>
-		<!--ng-submit="sendMessage()"-->
+	
         <form class="row row-chat"  ng-submit="sendMessage()">
             <div class="input-group">
                 <input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />

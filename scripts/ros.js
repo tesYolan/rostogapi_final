@@ -24,7 +24,17 @@
 		response : ''
 	}); 
   
-  function NgChatCtrl($scope) {
+  
+ 
+ (function ($scope) {
+        "use strict"; 
+        function HangoutDemo() {
+        console.log("starting ..."); 
+		
+        gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
+        
+        }
+	function NgChatCtrl() {
             // Our server to connect to
   		
             //var listenMessage = new ROSLIB.Message({
@@ -80,16 +90,6 @@
             // Once connected, we need to join the chat
 
         }
- 
- (function () {
-        "use strict"; 
-        function HangoutDemo() {
-        console.log("starting ..."); 
-		
-        gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        
-        }
-	
 	function startROS() {
 	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
