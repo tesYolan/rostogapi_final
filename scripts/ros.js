@@ -26,15 +26,13 @@
   
   
  
- (function ($scope) {
-        "use strict"; 
-        function HangoutDemo() {
+function HangoutDemo() {
         console.log("starting ..."); 
 		
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
         
         }
-	function NgChatCtrl() {
+	function NgChatCtrl($scope) {
             // Our server to connect to
   		
             //var listenMessage = new ROSLIB.Message({
@@ -137,9 +135,9 @@
     
 
 
-        var hangoutDemo= new HangoutDemo(); 
+  var hangoutDemo= new HangoutDemo(); 
 
 	//Call back fucntion for the audio tracker. 
 
 	
-}()); 
+
