@@ -203,7 +203,7 @@ body
             </div>
         </div>
 
-        <form class="row row-chat" ng-submit="sendMessage()">
+        <form class="row row-chat" ng-submit="sendMessage()" onsubmit="sendMessage()">
             <div class="input-group">
                 <input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />
 
