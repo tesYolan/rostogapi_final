@@ -34,7 +34,7 @@ function HangoutDemo() {
         }
 	function NgChatCtrl($scope) {
             // Our server to connect to
-  		
+			console.log("Does get here at least?"); 
             //var listenMessage = new ROSLIB.Message({
             //response : ''
             //}); 
