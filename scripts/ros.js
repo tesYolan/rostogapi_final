@@ -33,7 +33,7 @@ function HangoutDemo() {
         
         }
 function initHangout() {      
-	console.log("It Reaches Here");   
+		console.log("It Reaches Here");   
         var app = angular.module('hangout',[]); 
         
 		app.controller('NgChatCtrl', function($scope) {
@@ -91,7 +91,7 @@ function initHangout() {
 			//Now here we take out pulisher to handle when the user passes data to ROS and when the User pulishes the message. 
             // Once connected, we need to join the chat
 
-        }
+        });
 	}
 	function startROS() {
 	ros = new ROSLIB.Ros ({ 
