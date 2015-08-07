@@ -52,12 +52,12 @@ function HangoutDemo() {
             $scope.messages = [];
             $scope.sendMessage = function () {
                 //server.sendNgChatMessage($scope.messageText);
-                message.utterance  = $scope.messageText; 
+                message.utterance  = $scope.eva.messageText; 
                 chatTopic.publish(message); 
                 console.log(message.utterance); 
                 chatPublish(message.utterance); 
                 
-                $scope.messageText = "";
+                $scope.eva.messageText = "";
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
