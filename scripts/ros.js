@@ -49,7 +49,7 @@
 
             // Messages, client info & sending
             $scope.messages.txts = [];
-            $scope.sendMessage.send = function () {
+            $scope.sendMessage = function () {
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText.text; 
                 chatTopic.publish(message); 
