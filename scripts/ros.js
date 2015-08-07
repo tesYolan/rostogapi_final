@@ -32,7 +32,11 @@ function HangoutDemo() {
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
         
         }
-	function NgChatCtrl($scope) {
+function initHangout() {      
+	console.log("It Reaches Here");   
+        var app = angular.module('hangout',[]); 
+        
+		app.controller('NgChatCtrl', function($scope) {
             // Our server to connect to
 			console.log("Does get here at least?"); 
             //var listenMessage = new ROSLIB.Message({
@@ -88,6 +92,7 @@ function HangoutDemo() {
             // Once connected, we need to join the chat
 
         }
+	}
 	function startROS() {
 	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
@@ -111,8 +116,10 @@ function HangoutDemo() {
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {
-			
+			console.log("Start the Projects"); 
 			startROS(); 
+			condole.log("Started the UI"); 
+			initHangout(); 
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
