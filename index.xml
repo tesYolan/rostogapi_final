@@ -131,7 +131,7 @@ body
 	margin-right: 75px;
 }
 		</style>
-		
+<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js"></script>		
 		<div id="browser-window" ng-controller="NgChatCtrl">
         <div id="viewport">
             <div id="viewport-content">
@@ -153,7 +153,7 @@ body
 
         </form>
     </div>
-<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js"></script>
+
       ]]>	
     </Content>	
   </Module>
