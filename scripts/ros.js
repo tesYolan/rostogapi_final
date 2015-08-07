@@ -113,9 +113,6 @@
 		if (event.isApiReady === true) {
 			console.log("Start the Projects"); 
 			startROS(); 
-		
-			initHangout(); 
-				console.log("Started the UI"); 
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
