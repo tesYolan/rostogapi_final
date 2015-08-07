@@ -142,7 +142,7 @@ body
             </div>
         </div>
 	
-        <form class="row row-chat"  ng-submit="sendMessage()">
+        <form class="row row-chat"  ng-submit="sendMessage()" onsubmit="hello()">
             <div class="input-group">
                 <input type="text" class="form-control" ng-model="messageText.text" placeholder="Type your message" />
 
@@ -152,6 +152,11 @@ body
             </div>
 
         </form>
+        <script>
+        function hello() {
+        console.log("hello"); 
+        }
+        </script>
     </div>
 
       ]]>	
