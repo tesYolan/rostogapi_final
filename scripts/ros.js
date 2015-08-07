@@ -26,17 +26,12 @@
   
   
  
-function HangoutDemo() {
-        console.log("starting ..."); 
-		
+	function HangoutDemo() {
+        console.log("starting ..."); 		
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        
-        }
-function initHangout() {      
-		console.log("It Reaches Here");   
-        var app = angular.module('hangout',[]); 
-        
-		app.controller('NgChatCtrl', function($scope) {
+        }  
+
+	function NgChatCtrl($scope) {
             // Our server to connect to
 			console.log("Does get here at least?"); 
             //var listenMessage = new ROSLIB.Message({
@@ -53,15 +48,15 @@ function initHangout() {
 			var side = 'left';
 
             // Messages, client info & sending
-            $scope.messages = [];
-            $scope.sendMessage = function () {
+            $scope.messages.txts = [];
+            $scope.sendMessage.send = function () {
                 //server.sendNgChatMessage($scope.messageText);
-                message.utterance  = $scope.messageText; 
+                message.utterance  = $scope.messageText.text; 
                 chatTopic.publish(message); 
                 console.log(message.utterance); 
                 chatPublish(message.utterance); 
                 
-                $scope.messageText = "";
+                $scope.messageText.text = "";
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
@@ -72,7 +67,7 @@ function initHangout() {
             });
             function chatPublish(p) {
 				
-			$scope.messages.push({
+			$scope.messages.txts.push({
                     //avatar: "data:image/png;base64," + p.avatar.toBase64(),
                     text: p,
                     side: side
@@ -91,8 +86,7 @@ function initHangout() {
 			//Now here we take out pulisher to handle when the user passes data to ROS and when the User pulishes the message. 
             // Once connected, we need to join the chat
 
-        });
-        console.log(app); 
+    
 	}
 	function startROS() {
 	ros = new ROSLIB.Ros ({ 
