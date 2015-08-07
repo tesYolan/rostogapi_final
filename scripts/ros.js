@@ -35,7 +35,7 @@ function HangoutDemo() {
 function initHangout() {      
 		console.log("It Reaches Here");   
         var app = angular.module('hangout',[]); 
-        console.log(app); 
+        
 		app.controller('NgChatCtrl', function($scope) {
             // Our server to connect to
 			console.log("Does get here at least?"); 
@@ -92,6 +92,7 @@ function initHangout() {
             // Once connected, we need to join the chat
 
         });
+        console.log(app); 
 	}
 	function startROS() {
 	ros = new ROSLIB.Ros ({ 
