@@ -33,7 +33,7 @@
 
 	function NgChatCtrl($scope) {
             // Our server to connect to
-			console.log("Does get here at least?"); 
+			
             //var listenMessage = new ROSLIB.Message({
             //response : ''
             //}); 
@@ -50,6 +50,7 @@
             // Messages, client info & sending
             $scope.messages.txts = [];
             $scope.sendMessage = function () {
+				console.log("Does get here at least?"); 
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText.text; 
                 chatTopic.publish(message); 
