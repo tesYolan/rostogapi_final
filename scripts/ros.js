@@ -68,7 +68,7 @@
             });
             function chatPublish(p) {
 				
-			$scope.messagespush({
+			$scope.messages.push({
                     //avatar: "data:image/png;base64," + p.avatar.toBase64(),
                     text: p,
                     side: side
