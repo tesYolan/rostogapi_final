@@ -1,4 +1,3 @@
-	(function(angular) {
 		angular.module('ngAppStrictDemo', [])
 	.controller('NgChatCtrl', function($scope) {
             // Our server to connect to
@@ -57,5 +56,5 @@
             // Once connected, we need to join the chat
 
     
-	})
-})(window.angular); 
+	});
+
