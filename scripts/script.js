@@ -14,11 +14,7 @@
 		confidence : 90
 		}); 
 //===========================================================================		
-	var chatResponse = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_responses',
-		messageType : 'std_msgs/String'
-	}); 
+
 	
 	var listenMessage = new ROSLIB.Message({
 		response : ''
@@ -56,6 +52,11 @@
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
+            	var chatResponse = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_responses',
+		messageType : 'std_msgs/String'
+	}); 
 			chatResponse.subscribe(function(p) {
 		//	console.log(p.data); 
 			chatPublish(p.data);          
