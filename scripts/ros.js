@@ -1,5 +1,5 @@
         
-        	var ros; 
+    var ros; 
 	var rosok=false;  
 	var participants_list;    
 //===========================================================================
