@@ -4,11 +4,7 @@
 	var rosok=false;  
 	var participants_list;    
 //===========================================================================
-	var chatTopic = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_speech',
-		messageType : 'chatbot/ChatMessage'
-	}); 
+
 
 //===========================================================================		
 
@@ -43,6 +39,11 @@
 						utterance : '', 
 							confidence : 99
 						}); 
+			var chatTopic = new ROSLIB.Topic({
+			ros : ros, 
+			name : '/eva/chatbot_speech',
+			messageType : 'chatbot/ChatMessage'
+			}); 
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText; 
                 chatTopic.publish(message); 
