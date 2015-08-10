@@ -70,7 +70,7 @@
                     text: p,
                     side: side
 				}); 
-            	$scope.$apply();	
+            //	$scope.$apply();	
 
                 // Animate
                 $("#viewport-content").animate({
