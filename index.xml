@@ -9,7 +9,7 @@
     <Content type="html">	
       <![CDATA[	
       <!DOCTYPE html>
-      <html>
+      <html ng-app="">
       	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'/>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -134,7 +134,7 @@ body
 }
 		</style>
 
-		<div id="browser-window" ng-app="" ng-controller="NgChatCtrl">
+		<div id="browser-window" ng-controller="NgChatCtrl">
         <div id="viewport">
             <div id="viewport-content">
                 <div class="bubble-container" ng-repeat="m in messages.txt">
