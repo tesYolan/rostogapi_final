@@ -54,7 +54,6 @@
 			console.log("Start the Projects"); 
 			startROS(); 
 			console.log("API Ready");	
-			window.angular(); 
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
 
