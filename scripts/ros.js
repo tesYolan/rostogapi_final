@@ -48,6 +48,11 @@
 		rosok=true; 
 		});
 	}
+				chatResponse.subscribe(function(p) {
+				console.log(p.data); 
+				chatPublish(p.data); 
+              
+            });
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {
