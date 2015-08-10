@@ -60,7 +60,7 @@
 	}); 
 			chatResponse.subscribe(function(p) {
 			console.log(p.data); 
-			$timeout(chatPublish(p.data),2); 
+			$timeout(chatPublish(p.data)); 
 			$scope.messageText="";          
             });
             function chatPublish(p) {
