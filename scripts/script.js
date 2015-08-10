@@ -35,22 +35,21 @@
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
-						var message = new ROSLIB.Message({
-						utterance : '', 
-							confidence : 99
-						}); 
+			var message = new ROSLIB.Message({
+			utterance : '', 
+			confidence : 99
+			}); 
 			var chatTopic = new ROSLIB.Topic({
 			ros : ros, 
 			name : '/eva/chatbot_speech',
 			messageType : 'chatbot/ChatMessage'
 			}); 
                 //server.sendNgChatMessage($scope.messageText);
-                message.utterance  = $scope.messageText; 
-                chatTopic.publish(message); 
-                console.log(message.utterance); 
-                chatPublish(message.utterance); 
-                
-                $scope.messageText = "";
+            message.utterance  = $scope.messageText; 
+            chatTopic.publish(message); 
+            console.log(message.utterance); 
+            chatPublish(message.utterance); 
+			$scope.messageText = "";
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
@@ -71,7 +70,7 @@
                     text: p,
                     side: side
 				}); 
-            		
+            	$scope.$apply();	
 
                 // Animate
                 $("#viewport-content").animate({
