@@ -1,9 +1,3 @@
-
-		function startROS() {
-
-
-
-	} 	
 	var app= angular.module('ngAppStrictDemo', [])
 	app.controller('NgChatCtrl', function($scope) {
 		   var ros; 
