@@ -1,19 +1,6 @@
-		angular.module('ngAppStrictDemo', [])
-	.controller('NgChatCtrl', function($scope) {
-            // Our server to connect to
-			
-            //var listenMessage = new ROSLIB.Message({
-            //response : ''
-            //}); 
-
-			//chatResponse.subscribe(function(message) {
-			//listenMessage.response = message.data; 
-
-			//console.log(message.data); 
-			//}); 
-			
-			
-			var side = 'left';
+	var app= angular.module('ngAppStrictDemo', [])
+	app.controller('NgChatCtrl', function($scope) {
+            var side = 'left';
 
             // Messages, client info & sending
             $scope.messages = [];
