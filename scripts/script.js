@@ -58,5 +58,5 @@
             // Once connected, we need to join the chat
 
     
-	}
+	})
 })(window.angular); 
