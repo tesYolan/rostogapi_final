@@ -48,7 +48,7 @@
             message.utterance  = $scope.messageText; 
             chatTopic.publish(message); 
             console.log(message.utterance); 
-            setTimeout(chatPublish(message.utterance)); 
+            chatPublish(message.utterance); 
 			$scope.messageText = "";
             };
             // Occurs when we receive chat messages
