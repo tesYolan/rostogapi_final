@@ -48,7 +48,7 @@
             message.utterance  = $scope.messageText; 
             chatTopic.publish(message); 
             console.log(message.utterance); 
-            chatPublish(message.utterance); 
+            setTimeout(chatPublish(message.utterance)); 
 			$scope.messageText = "";
             };
             // Occurs when we receive chat messages
@@ -60,7 +60,7 @@
 	}); 
 			chatResponse.subscribe(function(p) {
 			console.log(p.data); 
-			chatPublish(p.data); 
+			setTimeout(chatPublish(p.data)); 
 			$scope.messageText="";          
             });
             function chatPublish(p) {
