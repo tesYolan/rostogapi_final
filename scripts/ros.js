@@ -26,10 +26,7 @@
 		console.log('Connection to websocket server closed.');
 		rosok=true; 
 		});
-			chatResponse.subscribe(function(p) {
-	console.log(p.data); 
-	chatPublish(p.data);          
-            });
+
 	}
 
 		

@@ -39,7 +39,10 @@
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
-
+			chatResponse.subscribe(function(p) {
+			console.log(p.data); 
+			chatPublish(p.data);          
+            });
             function chatPublish(p) {
 				
 			$scope.messages.push({
