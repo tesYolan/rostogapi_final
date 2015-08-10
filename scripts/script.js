@@ -1,4 +1,12 @@
-   var ros; 
+
+		function startROS() {
+
+
+
+	} 	
+	var app= angular.module('ngAppStrictDemo', [])
+	app.controller('NgChatCtrl', function($scope) {
+		   var ros; 
 	var rosok=false;  
 	var participants_list;    
 //===========================================================================
@@ -21,8 +29,7 @@
 	var listenMessage = new ROSLIB.Message({
 		response : ''
 	});    
-		function startROS() {
-
+            var side = 'left';
 	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
 	  }); 
@@ -41,12 +48,6 @@
 		console.log('Connection to websocket server closed.');
 		rosok=true; 
 		});
-
-	} 	
-	var app= angular.module('ngAppStrictDemo', [])
-	app.controller('NgChatCtrl', function($scope) {
-            var side = 'left';
-			startROS(); 
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
