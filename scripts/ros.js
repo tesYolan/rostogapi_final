@@ -48,7 +48,7 @@
 			var side = 'left';
 
             // Messages, client info & sending
-            $scope.messages.txts = [];
+            $scope.messages.txts = ["Hi", "Hello", "What's Up", "Nothing's Up"];
             $scope.sendMessage = function () {
 				console.log("Does get here at least?"); 
                 //server.sendNgChatMessage($scope.messageText);

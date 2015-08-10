@@ -154,7 +154,7 @@ body
         </form>
         <script>
         function hello() {
-        console.log("hello"); 
+        
         }
         </script>
     </div>
