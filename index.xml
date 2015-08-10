@@ -18,7 +18,7 @@
         <script type="text/javascript" src="https://rawgit.com/asyncly/EventEmitter2/master/lib/eventemitter2.js"></script>
 		<script type="text/javascript" src="https://rawgit.com/RobotWebTools/roslibjs/develop/build/roslib.min.js"></script>	
 		<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js"></script>		
-	    
+	    <script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/script.js"></script>
 		<style type="text/css">
 
 body
@@ -134,7 +134,7 @@ body
 	margin-right: 75px;
 }
 		</style>
-		<div ng-app="ngAppStrictDemo" ng-strict-di>
+		<div ng-app="ngAppStrictDemo">
 		<div id="browser-window" ng-controller="NgChatCtrl">
         <div id="viewport">
             <div id="viewport-content">
