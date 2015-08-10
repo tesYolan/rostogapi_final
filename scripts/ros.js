@@ -48,11 +48,12 @@
 		console.log('Connection to websocket server closed.');
 		rosok=true; 
 		});
-	}
-	chatResponse.subscribe(function(p) {
+			chatResponse.subscribe(function(p) {
 	console.log(p.data); 
-	app.chatPublish(p.data);          
+	chatPublish(p.data);          
             });
+	}
+
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {
