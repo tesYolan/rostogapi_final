@@ -9,10 +9,7 @@
 		name : '/eva/chatbot_speech',
 		messageType : 'chatbot/ChatMessage'
 	}); 
-	var message = new ROSLIB.Message({
-		utterance : '', 
-		confidence : 90
-		}); 
+
 //===========================================================================		
 
 	
@@ -38,10 +35,14 @@
 		console.log('Connection to websocket server closed.');
 		rosok=true; 
 		});
+
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
-				
+						var message = new ROSLIB.Message({
+						utterance : '', 
+							confidence : 99
+						}); 
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText; 
                 chatTopic.publish(message); 
