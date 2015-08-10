@@ -1,5 +1,4 @@
 	(function(angular) {
-		'use strict'; 
 		angular.module('ngAppStrictDemo', [])
 	.controller('NgChatCtrl', function($scope) {
             // Our server to connect to
