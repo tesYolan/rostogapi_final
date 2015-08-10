@@ -17,16 +17,16 @@
 			var side = 'left';
 
             // Messages, client info & sending
-            $scope.messages.txt = [];
+            $scope.messages = [];
             $scope.sendMessage = function () {
 				console.log("Does get here at least?"); 
                 //server.sendNgChatMessage($scope.messageText);
-                message.utterance  = $scope.messageText.txt; 
+                message.utterance  = $scope.messageText; 
                 chatTopic.publish(message); 
                 console.log(message.utterance); 
                 chatPublish(message.utterance); 
                 
-                $scope.messageText.txt = "";
+                $scope.messageText = "";
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
@@ -37,7 +37,7 @@
             });
             function chatPublish(p) {
 				
-			$scope.messages.txt.push({
+			$scope.messages.push({
                     //avatar: "data:image/png;base64," + p.avatar.toBase64(),
                     text: p,
                     side: side
