@@ -6,34 +6,13 @@
         }  
 
 
-	function startROS() {
 
-	ros = new ROSLIB.Ros ({ 
-	  url : 'wss://localhost:9094'
-	  }); 
-	  
-	  ros.on('connection', function() {
-	  console.log('Connected to ROS'); 
-	  rosok=true; 
-	  }); 
-	  
-		ros.on('error', function(error) {
-		console.log('Error connecting to websocket server: ', error);
-		rosok=false; 
-		});
-
-		ros.on('close', function() {
-		console.log('Connection to websocket server closed.');
-		rosok=true; 
-		});
-
-	}
 
 		
 	HangoutDemo.prototype.onApiReady = function (event) {	
 		if (event.isApiReady === true) {
 			console.log("Start the Projects"); 
-			startROS(); 
+			//startROS(); 
 			console.log("API Ready");	
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 

@@ -20,18 +20,40 @@
 	
 	var listenMessage = new ROSLIB.Message({
 		response : ''
-	});     	
+	});    
+		function startROS() {
+
+	ros = new ROSLIB.Ros ({ 
+	  url : 'wss://localhost:9094'
+	  }); 
+	  
+	  ros.on('connection', function() {
+	  console.log('Connected to ROS'); 
+	  rosok=true; 
+	  }); 
+	  
+		ros.on('error', function(error) {
+		console.log('Error connecting to websocket server: ', error);
+		rosok=false; 
+		});
+
+		ros.on('close', function() {
+		console.log('Connection to websocket server closed.');
+		rosok=true; 
+		});
+
+	} 	
 	var app= angular.module('ngAppStrictDemo', [])
 	app.controller('NgChatCtrl', function($scope) {
             var side = 'left';
-
+			startROS(); 
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
 				
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText; 
-                //this.chatTopic.publish(message); 
+                chatTopic.publish(message); 
                 console.log(message.utterance); 
                 chatPublish(message.utterance); 
                 
@@ -39,9 +61,9 @@
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
-	//		chatResponse.subscribe(function(p) {
+			chatResponse.subscribe(function(p) {
 		//	console.log(p.data); 
-			//chatPublish(p.data);          
+			chatPublish(p.data);          
             //});
             function chatPublish(p) {
 				
