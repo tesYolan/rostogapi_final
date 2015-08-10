@@ -1,3 +1,26 @@
+   var ros; 
+	var rosok=false;  
+	var participants_list;    
+//===========================================================================
+	var chatTopic = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_speech',
+		messageType : 'chatbot/ChatMessage'
+	}); 
+	var message = new ROSLIB.Message({
+		utterance : '', 
+		confidence : 90
+		}); 
+//===========================================================================		
+	var chatResponse = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_responses',
+		messageType : 'std_msgs/String'
+	}); 
+	
+	var listenMessage = new ROSLIB.Message({
+		response : ''
+	});     	
 	var app= angular.module('ngAppStrictDemo', [])
 	app.controller('NgChatCtrl', function($scope) {
             var side = 'left';
@@ -5,7 +28,7 @@
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
-				console.log("Does get here at least?"); 
+				
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText; 
                 chatTopic.publish(message); 

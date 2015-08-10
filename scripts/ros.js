@@ -1,26 +1,4 @@
-    var ros; 
-	var rosok=false;  
-	var participants_list;    
-//===========================================================================
-	var chatTopic = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_speech',
-		messageType : 'chatbot/ChatMessage'
-	}); 
-	var message = new ROSLIB.Message({
-		utterance : '', 
-		confidence : 90
-		}); 
-//===========================================================================		
-	var chatResponse = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_responses',
-		messageType : 'std_msgs/String'
-	}); 
-	
-	var listenMessage = new ROSLIB.Message({
-		response : ''
-	});     
+ 
 
 	function HangoutDemo() {
         console.log("starting ..."); 		
