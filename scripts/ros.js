@@ -1,13 +1,4 @@
-        
-
-	function HangoutDemo() {
-        console.log("starting ..."); 		
-        gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
-        }  
-
-
-	function startROS() {
-		    var ros; 
+    var ros; 
 	var rosok=false;  
 	var participants_list;    
 //===========================================================================
@@ -29,7 +20,16 @@
 	
 	var listenMessage = new ROSLIB.Message({
 		response : ''
-	}); 
+	});     
+
+	function HangoutDemo() {
+        console.log("starting ..."); 		
+        gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
+        }  
+
+
+	function startROS() {
+
 	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
 	  }); 
