@@ -62,6 +62,7 @@
 			chatResponse.subscribe(function(p) {
 			console.log(p.data); 
 			chatPublish(p.data); 
+			$scope.messageText="";          
             });
             function chatPublish(p) {
 				
