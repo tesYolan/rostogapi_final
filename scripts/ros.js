@@ -1,6 +1,5 @@
         
-        
-	var ros; 
+        	var ros; 
 	var rosok=false;  
 	var participants_list;    
 //===========================================================================
@@ -23,9 +22,6 @@
 	var listenMessage = new ROSLIB.Message({
 		response : ''
 	}); 
-  
-  
- 
 	function HangoutDemo() {
         console.log("starting ..."); 		
         gapi.hangout.onApiReady.add(this.onApiReady.bind(this)); 
@@ -58,6 +54,7 @@
 			console.log("Start the Projects"); 
 			startROS(); 
 			console.log("API Ready");	
+			window.angular(); 
 			gapi.hangout.onParticipantsChanged.add(
 				this.onParticipantsChanged.bind(this)); 
 
