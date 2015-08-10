@@ -9,7 +9,7 @@
     <Content type="html">	
       <![CDATA[	
       <!DOCTYPE html>
-      <html ng-app="">
+      <html>
       	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'/>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -20,6 +20,7 @@
 		<script type="text/javascript" src="https://rawgit.com/tesYolan/rostogapi_final/angular_ui/scripts/ros.js"></script>		
 	    
 		<style type="text/css">
+	<body ng-app>
 body
 {
 	font-family: 'Open Sans', Arial, sans-serif;
