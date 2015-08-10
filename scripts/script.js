@@ -31,7 +31,7 @@
 				
                 //server.sendNgChatMessage($scope.messageText);
                 message.utterance  = $scope.messageText; 
-                this.chatTopic.publish(message); 
+                //this.chatTopic.publish(message); 
                 console.log(message.utterance); 
                 chatPublish(message.utterance); 
                 
