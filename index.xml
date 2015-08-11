@@ -31,12 +31,20 @@ body
 }
 
 #browser-window{
+	float: left; 
 	background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
 	height: 538px;
 	width: 335px;
 	padding: 49px 25px 10px 25px;
 	margin: auto;
 	position:relative;
+}
+#viewport-video{
+	float: right; 
+	background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
+	height: 538px;
+	width: 335px;
+	padding: 49px 25px 10px 25px;
 }
 
 #viewport{
@@ -158,6 +166,9 @@ body
         </form>
         
     </div>
+    </div>
+    <div id='viewport-video'>
+    
     </div>
 	
 	   
