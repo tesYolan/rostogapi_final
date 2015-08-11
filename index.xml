@@ -42,7 +42,7 @@ body
 #viewport-video{
 	float: right; 
 	background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
-	height: 538px;
+	cd height: 538px;
 	width: 335px;
 	padding: 49px 25px 10px 25px;
 }
@@ -144,32 +144,42 @@ body
 	margin-right: 75px;
 }
 		</style>
-		<div ng-app="ngAppStrictDemo">
-		<div id="browser-window" ng-controller="NgChatCtrl">
-        <div id="viewport">
-            <div id="viewport-content">
-                <div class="bubble-container" ng-repeat="m in messages">
-                  <!--  <div class="avatar avatar-{{m.side}}"> <img src="{{m.avatar}}" /></div> -->
-                    <div class="bubble bubble-{{m.side}}">{{m.text}}</div>
-                </div>
-            </div>
-        </div>
-	
-        <form class="row row-chat"  ng-submit="sendMessage()">
-            <div class="input-group">
-                <input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </span>
-            </div>
+    <div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-3">
+				<div ng-app="ngAppStrictDemo">
+				<div id="browser-window" ng-controller="NgChatCtrl">
+				<div id="viewport">
+					<div id="viewport-content">
+						<div class="bubble-container" ng-repeat="m in messages">
+						  <!--  <div class="avatar avatar-{{m.side}}"> <img src="{{m.avatar}}" /></div> -->
+							<div class="bubble bubble-{{m.side}}">{{m.text}}</div>
+						</div>
+					</div>
+				</div>
+			
+				<form class="row row-chat"  ng-submit="sendMessage()">
+					<div class="input-group">
+						<input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</span>
+					</div>
 
-        </form>
-        
+				</form>
+				
+			</div>
+			</div>
     </div>
-    </div>
-    <div id='viewport-video'>
+		
+		<div class="col-lg-2"></div>
+		</div class="col-lg-3">
+			<div id='viewport-video'>
     
+			</div>
+		</div>
     </div>
+   
 	
 	   
 </body>
