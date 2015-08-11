@@ -42,7 +42,7 @@
 			chatPublish(p.data); 
 			
             });
-            
+            side='left'; 
             
 			var message = new ROSLIB.Message({
 			utterance : '', 
@@ -84,7 +84,7 @@
                 }, 250);
 
                 // flip the side
-                side = side == 'left' ? 'right' : 'left';
+              //  side = side == 'left' ? 'right' : 'left';
 			}
 			
 			//Now here we take out pulisher to handle when the user passes data to ROS and when the User pulishes the message. 
