@@ -41,7 +41,7 @@ body
 }
 #viewport-video{
 	
-	background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
+	//background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
 	height: 538px;
 	width: 335px;
 	padding: 49px 25px 10px 25px;
@@ -175,7 +175,9 @@ body
 		<div class="col-lg-2"></div>
 		<div class="col-lg-3">
 			<div id='viewport-video'>
-    
+			<video src="rtsp://localhost:8888/live.sdp"	>
+			It doesn't load the webpage as it doesn't have the required plugin. 
+			</video>
 			</div>
 		</div>
 		<div class="col-lg-2"></div>
