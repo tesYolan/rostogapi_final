@@ -40,7 +40,7 @@
 			side='right'; 	
 			console.log(p.data); 
 			chatPublish(p.data); 
-			
+			chatResponse.unsubscribe(); 
             });
             side='left'; 
             
