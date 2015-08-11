@@ -34,12 +34,13 @@
 
             // Messages, client info & sending
             $scope.messages = [];
-            $scope.sendMessage = function () {
 			chatResponse.subscribe(function(p) {
 			console.log(p.data); 
 			chatPublish(p.data); 
 			$scope.messageText="";          
             });
+            $scope.sendMessage = function () {
+
 			var message = new ROSLIB.Message({
 			utterance : '', 
 			confidence : 99
