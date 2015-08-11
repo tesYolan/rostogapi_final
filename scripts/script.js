@@ -37,13 +37,18 @@
             $scope.messages = [];
             $scope.sendMessage = function () {
 			if (listening)
+			{
 			chatResponse.subscribe(function(p) {
 			side='right'; 	
 			console.log(p.data); 
 			chatPublish(p.data); 
 			listening = false; 
             });
-            
+			}
+			else 
+			{
+				side='right'; 	
+			}
             side='left'; 
             
 			var message = new ROSLIB.Message({
