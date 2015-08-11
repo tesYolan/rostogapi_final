@@ -42,7 +42,7 @@ body
 #viewport-video{
 	
 	background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
-	cd height: 538px;
+	height: 538px;
 	width: 335px;
 	padding: 49px 25px 10px 25px;
 }
@@ -173,7 +173,7 @@ body
     </div>
 		
 		<div class="col-lg-2"></div>
-		</div class="col-lg-3">
+		<div class="col-lg-3">
 			<div id='viewport-video'>
     
 			</div>
