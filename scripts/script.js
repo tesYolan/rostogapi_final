@@ -35,6 +35,11 @@
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
+			chatResponse.subscribe(function(p) {
+			console.log(p.data); 
+			chatPublish(p.data); 
+			$scope.messageText="";          
+            });
 			var message = new ROSLIB.Message({
 			utterance : '', 
 			confidence : 99
@@ -58,11 +63,7 @@
 		name : '/eva/chatbot_responses',
 		messageType : 'std_msgs/String'
 	}); 
-			chatResponse.subscribe(function(p) {
-			console.log(p.data); 
-			$timeout(chatPublish(p.data)); 
-			$scope.messageText="";          
-            });
+			
             function chatPublish(p) {
 				
 			$scope.messages.push({
