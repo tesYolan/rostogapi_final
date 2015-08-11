@@ -13,6 +13,7 @@
 		response : ''
 	});    
             var side = 'left';
+            var listening= true; 
 	ros = new ROSLIB.Ros ({ 
 	  url : 'wss://localhost:9094'
 	  }); 
@@ -35,12 +36,12 @@
             // Messages, client info & sending
             $scope.messages = [];
             $scope.sendMessage = function () {
-			
+			if (listening)
 			chatResponse.subscribe(function(p) {
 			side='right'; 	
 			console.log(p.data); 
 			chatPublish(p.data); 
-			chatResponse.unsubscribe(); 
+			listening = false; 
             });
             
             side='left'; 
