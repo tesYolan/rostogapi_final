@@ -40,9 +40,9 @@
 			side='right'; 	
 			console.log(p.data); 
 			chatPublish(p.data); 
-			
+			chatResponse.unsubscribe(); 
             });
-            chatResponse.unsubscribe(); 
+            
             side='left'; 
             
 			var message = new ROSLIB.Message({
