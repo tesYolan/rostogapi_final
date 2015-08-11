@@ -34,13 +34,16 @@
 
             // Messages, client info & sending
             $scope.messages = [];
-			chatResponse.subscribe(function(p) {
-			console.log(p.data); 
-			//chatPublish(p.data); 
-			//$scope.messageText="";          
-            });
             $scope.sendMessage = function () {
-
+			
+			chatResponse.subscribe(function(p) {
+			side='right'; 	
+			console.log(p.data); 
+			chatPublish(p.data); 
+			
+            });
+            
+            
 			var message = new ROSLIB.Message({
 			utterance : '', 
 			confidence : 99
@@ -72,7 +75,8 @@
                     text: p,
                     side: side
 				}); 
-            //	$scope.$apply();	
+            if(side == 'right')
+            	$scope.$apply();	
 
                 // Animate
                 $("#viewport-content").animate({
