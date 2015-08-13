@@ -175,9 +175,7 @@ body
 		<div class="col-lg-2"></div>
 		<div class="col-lg-3">
 			<div id='viewport-video'>
-			<video src="rtsp://localhost:8888/live.sdp"	>
-			It doesn't load the webpage as it doesn't have the required plugin. 
-			</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HDh4uK9PvJU" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="col-lg-2"></div>
