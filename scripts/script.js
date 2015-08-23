@@ -8,11 +8,7 @@
 
 //===========================================================================		
 
-	var chatResponse = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_responses',
-		messageType : 'std_msgs/String'
-	}); 
+	var chatResponse ;
 			
 	var listenMessage = new ROSLIB.Message({
 		response : ''
