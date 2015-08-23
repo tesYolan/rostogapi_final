@@ -8,7 +8,12 @@
 
 //===========================================================================		
 
-	
+	var chatResponse = new ROSLIB.Topic({
+		ros : ros, 
+		name : '/eva/chatbot_responses',
+		messageType : 'std_msgs/String'
+	}); 
+			
 	var listenMessage = new ROSLIB.Message({
 		response : ''
 	});    
@@ -69,12 +74,7 @@
             };
             // Occurs when we receive chat messages
             //server.on('ngChatMessagesInform', function (p) {
-        var chatResponse = new ROSLIB.Topic({
-		ros : ros, 
-		name : '/eva/chatbot_responses',
-		messageType : 'std_msgs/String'
-	}); 
-			
+
             function chatPublish(p) {
 				
 			$scope.messages.push({
