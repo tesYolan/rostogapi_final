@@ -15,7 +15,7 @@
             var side = 'left';
             var listening= true; 
 	ros = new ROSLIB.Ros ({ 
-	  url : 'wss://localhost:9094'
+	  url : 'wss://192.168.1.34:9094'
 	  }); 
 	  
 	  ros.on('connection', function() {
@@ -45,15 +45,12 @@
 			if (listening)
 			{
 			chatResponse.subscribe(function(p) {
-			side='right'; 	
-			chatPublish(p.data,side); 
-			listening = false; 
+			//side='right'; 	Not needed. 
+			chatPublish(p.data,'right'); 
             });
+            listening = false; 
 			}
-			else 
-			{
-				side='right'; 	
-			}
+			
             side='left'; 
             
 			var message = new ROSLIB.Message({
