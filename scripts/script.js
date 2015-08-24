@@ -83,7 +83,6 @@
             function chatPublish(p,side) {
 				var delta = {'text': p, 'side':side}; 
 			    gapi.hangout.data.submitDelta(delta); 
-		
 			}
 			
 			function updateUI() {
@@ -95,7 +94,7 @@
                     side: state['side']
 				}); 
 			if(state['side'] == 'right')//Change this to UI or Eva. 
-            {	console.log('it gets here'); 
+            {	
 				$scope.$apply();	
 			}
                 // Animate

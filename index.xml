@@ -39,14 +39,21 @@ body
 	margin: auto;
 	position:relative;
 }
-#viewport-video{
-	
-	//background: url("https://raw.githubusercontent.com/tesYolan/rostogapi_final/master/gfx/background.png") ;
-	height: 538px;
-	width: 335px;
-	padding: 49px 25px 10px 25px;
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
 }
 
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
 #viewport{
 	overflow:hidden;
 	height: 420px;
@@ -145,8 +152,8 @@ body
 }
 		</style>
     <div class="row">
-		<div class="col-lg-2"></div>
-		<div class="col-lg-3">
+		
+		<div class="col-sm-3 col-md-6 col-lg-4">
 				<div ng-app="ngAppStrictDemo">
 				<div id="browser-window" ng-controller="NgChatCtrl">
 				<div id="viewport">
@@ -167,15 +174,13 @@ body
 				</form>
 			</div>
 			</div>
-    </div>
-		
-		<div class="col-lg-2"></div>
-		<div class="col-lg-3">
-			<div id='viewport-video'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HDh4uK9PvJU?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+    </div>	
+		<div class="col-sm-9 col-md-6 col-lg-8">
+			<div id='video-container'>
+<iframe width="560" height="480" src="https://www.youtube.com/embed/HDh4uK9PvJU?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
-		<div class="col-lg-2"></div>
+		
     </div>
    
 	
