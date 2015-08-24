@@ -77,7 +77,6 @@
             function chatPublish(p,side) {
 				var delta = {'text': p, 'side':side}; 
 			    gapi.hangout.data.submitDelta(delta); 
-				
 			}
 			
 			function updateUI() {
