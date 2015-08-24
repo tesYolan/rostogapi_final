@@ -40,7 +40,6 @@
 			{
 			chatResponse.subscribe(function(p) {
 			side='right'; 	
-			console.log(p.data); 
 			chatPublish(p.data,side); 
 			listening = false; 
             });
@@ -63,7 +62,7 @@
                 //server.sendNgChatMessage($scope.messageText);
             message.utterance  = $scope.messageText; 
             chatTopic.publish(message); 
-            console.log(message.utterance); 
+            
             chatPublish(message.utterance,side); 
 			$scope.messageText = "";
             };
@@ -78,10 +77,12 @@
             function chatPublish(p,side) {
 				var delta = {'text': p, 'side':side}; 
 			    gapi.hangout.data.submitDelta(delta); 
+				
+			}
+			gapi.hangout.data.onStateChanged(function (event) {
 				updateUI(); 
 			}
 			function updateUI() {
-				
 				var state= gapi.hangout.data.getState(); 
 				console.log("Hello");
 				console.log(state); 
