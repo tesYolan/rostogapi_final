@@ -41,7 +41,7 @@
 			chatResponse.subscribe(function(p) {
 			side='right'; 	
 			console.log(p.data); 
-			chatPublish(p.data); 
+			chatPublish(p.data,side); 
 			listening = false; 
             });
 			}
@@ -64,7 +64,7 @@
             message.utterance  = $scope.messageText; 
             chatTopic.publish(message); 
             console.log(message.utterance); 
-            chatPublish(message.utterance); 
+            chatPublish(message.utterance,side); 
 			$scope.messageText = "";
             };
             // Occurs when we receive chat messages
@@ -75,14 +75,20 @@
 		messageType : 'std_msgs/String'
 	}); 
 			
-            function chatPublish(p) {
+            function chatPublish(p,side) {
+				var delta = {'text': p, 'side':side}; 
+			    gapi.hangout.data.submitDelta(delta); 
+				updateUI(); 
+			}
+			function updateUI() {
+				var state= gapi.hangout.data.getState(); 
 				
-			$scope.messages.push({
+				$scope.messages.push({
                     //avatar: "data:image/png;base64," + p.avatar.toBase64(),
-                    text: p,
-                    side: side
+                    text: state['text'],//Change this to the delta values. 
+                    side: state['side']
 				}); 
-            if(side == 'right')
+			if(side == 'right')//Change this to UI or Eva. 
             	$scope.$apply();	
 
                 // Animate
@@ -93,10 +99,6 @@
                 // flip the side
               //  side = side == 'left' ? 'right' : 'left';
 			}
-			
-			//Now here we take out pulisher to handle when the user passes data to ROS and when the User pulishes the message. 
-            // Once connected, we need to join the chat
-
-    
+		
 	});
 
