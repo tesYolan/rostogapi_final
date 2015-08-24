@@ -18,11 +18,15 @@
 				this.onParticipantsChanged.bind(this)); 
 
         		this.displayParticipants();
-	
+				this.updateUI(); 
 		}	
 		};  
-
-
+		
+	HangoutDemo.prototype.updateUI = function (event) {	
+	gapi.hangout.data.onStateChanged(function (event) {
+				updateUI(); 
+			})
+	};
   HangoutDemo.prototype.onParticipantsChanged = function (event) {	
 
 

@@ -79,9 +79,7 @@
 			    gapi.hangout.data.submitDelta(delta); 
 				
 			}
-			gapi.hangout.data.onStateChanged(function (event) {
-				updateUI(); 
-			}
+			
 			function updateUI() {
 				var state= gapi.hangout.data.getState(); 
 				console.log("Hello");
