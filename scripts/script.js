@@ -81,8 +81,10 @@
 				updateUI(); 
 			}
 			function updateUI() {
-				var state= gapi.hangout.data.getState(); 
 				
+				var state= gapi.hangout.data.getState(); 
+				console.log("Hello");
+				console.log(state); 
 				$scope.messages.push({
                     //avatar: "data:image/png;base64," + p.avatar.toBase64(),
                     text: state['text'],//Change this to the delta values. 
