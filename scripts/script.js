@@ -34,6 +34,8 @@
 		});
 
             // Messages, client info & sending
+            // Make the state also persist across users. 
+            // Let's make the listening fucntion persisit across multiple users. 
             $scope.messages = [];
             $scope.sendMessage = function () {
 			if (listening)
