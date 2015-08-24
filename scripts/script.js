@@ -88,7 +88,7 @@
                     text: state['text'],//Change this to the delta values. 
                     side: state['side']
 				}); 
-			if(state['side'] == 'right' || state['side'] == 'left' )//Change this to UI or Eva. 
+			if(state['side'] == 'right')//Change this to UI or Eva. 
             	$scope.$apply();	
 
                 // Animate
