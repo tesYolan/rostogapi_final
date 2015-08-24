@@ -89,8 +89,9 @@
                     side: state['side']
 				}); 
 			if(state['side'] == 'right')//Change this to UI or Eva. 
-            	$scope.$apply();	
-
+            {	console.log('it gets here'); 
+				$scope.$apply();	
+			}
                 // Animate
                 $("#viewport-content").animate({
                     bottom: $("#viewport-content").height() - $("#viewport").height()
