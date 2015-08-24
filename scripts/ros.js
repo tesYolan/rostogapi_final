@@ -18,7 +18,7 @@
 				this.onParticipantsChanged.bind(this)); 
 
         		this.displayParticipants();
-				this.updateUI(); 
+				
 		}	
 		};  
 		
