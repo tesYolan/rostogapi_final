@@ -32,6 +32,10 @@
 		console.log('Connection to websocket server closed.');
 		rosok=true; 
 		});
+		
+			   	gapi.hangout.data.onStateChanged.add(function (event) {
+				updateUI(); 
+			});
 
             // Messages, client info & sending
             // Make the state also persist across users. 
@@ -79,9 +83,7 @@
             function chatPublish(p,side) {
 				var delta = {'text': p, 'side':side}; 
 			    gapi.hangout.data.submitDelta(delta); 
-			   	gapi.hangout.data.onStateChanged.add(function (event) {
-				updateUI(); 
-			});
+		
 			}
 			
 			function updateUI() {
