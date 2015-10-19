@@ -23,11 +23,45 @@
 		
 		<style type="text/css">
 
-body
-{
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-weight: 300;
-	font-size: 14px;
+html, body, div {
+  height: 100%;
+}
+
+body { 
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+article {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Pattern styles */
+div {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 1rem;
+}
+
+.left-half {
+  background: #F3F3ED;
+}
+
+.right-half {
+  background: #F3F3ED;
 }
 
 #browser-window{
@@ -151,37 +185,34 @@ body
 	margin-right: 75px;
 }
 		</style>
-    <div class="row">
-		
-		<div class="col-sm-3 col-md-6 col-lg-4">
-				<div ng-app="ngAppStrictDemo">
-				<div id="browser-window" ng-controller="NgChatCtrl">
-				<div id="viewport">
-					<div id="viewport-content">
+<div class="left-half">
+	<div id='video-container'>
+		<iframe width="560" height="480" src="https://www.youtube.com/embed/HDh4uK9PvJU?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+<div class= "right-half">
+<div ng-app="ngAppStrictDemo">
+			<div id="viewport">
+				<div id="viewport-content">
 						<div class="bubble-container" ng-repeat="m in messages">
-						  <!--  <div class="avatar avatar-{{m.side}}"> <img src="{{m.avatar}}" /></div> -->
-							<div class="bubble bubble-{{m.side}}">{{m.text}}</div>
+								<!--  <div class="avatar avatar-{{m.side}}"> <img src="{{m.avatar}}" /></div> -->
+								<div class="bubble bubble-{{m.side}}">{{m.text}}</div>
 						</div>
-					</div>
-				</div>		
-				<form class="row row-chat"  ng-submit="sendMessage()">
-					<div class="input-group">
-						<input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</span>
-					</div>
-				</form>
+				</div>
 			</div>
-			</div>
-    </div>	
-		<div class="col-sm-9 col-md-6 col-lg-8">
-			<div id='video-container'>
-<iframe width="560" height="480" src="https://www.youtube.com/embed/HDh4uK9PvJU?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		
-    </div>
+			<form class="row row-chat"  ng-submit="sendMessage()">
+						<div class="input-group">
+								<input type="text" class="form-control" ng-model="messageText" placeholder="Type your message" />
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary">Send</button>
+								</span>
+						</div>
+			</form>		
+</div>
+	<div style="width:100%; height:50%; background-color:#F2E7D9;">Could be used to implement angular js:IM ...</div>
+		<div style="width:100%; height:50%; background-color:#F2E7D9;"><hr>Sophia Controls ...</div>
+	</div>
+</div>	
    
 	
 	   
